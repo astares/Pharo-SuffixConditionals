@@ -2,7 +2,7 @@ Extension { #name : #BlockClosure }
 
 { #category : #'*SuffixConditionals-Core' }
 BlockClosure >> if: aBoolean [
-	^aBoolean ifTrue: [self value]
+	^aBoolean ifTrue: [self value] ifFalse: [  ]
 ]
 
 { #category : #'*SuffixConditionals-Core' }
@@ -15,5 +15,5 @@ BlockClosure >> if: aBoolean else: aBlock [
 
 { #category : #'*SuffixConditionals-Core' }
 BlockClosure >> unless: aBoolean [
-	^aBoolean ifFalse: [self value]
+	^aBoolean ifFalse: [self value] ifTrue: []
 ]

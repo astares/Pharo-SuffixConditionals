@@ -16,10 +16,9 @@ SuffixConditionalTest >> testEvaluatesBlockIfConditionIsTrue [
 
 { #category : #testing }
 SuffixConditionalTest >> testEvaluatesBlockUnlessConditionIsFalse [
-	 
 	| hit |
 	hit := false.
-	[hit := true] unless: false.
+	[ hit := true ] unless: false.
 	self assert: hit
 ]
 
